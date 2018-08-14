@@ -63,5 +63,4 @@
         android:layout_toEndOf="@id/button_to_friends"
         android:background="@drawable/my_button_shape" />
 
-
 </RelativeLayout>

@@ -26,21 +26,24 @@ public class myEyes extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_eyes);
 
-        ActionBar actionbar = getSupportActionBar(); //屏蔽标题
+        //屏蔽标题
+        ActionBar actionbar = getSupportActionBar();
         if(actionbar != null){
             actionbar.hide();
         }
 
+        //启动小天堂
         Button buttontoheaven = (Button) findViewById(R.id.button_to_heaven);
-        buttontoheaven.setOnClickListener(new View.OnClickListener(){ //启动小天堂
+        buttontoheaven.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 MynotesActivity.actionStart(myEyes.this, "data1", "data2");
             }
         });
 
+        //启动百事通
         Button buttontoencyclopedia = (Button) findViewById(R.id.button_to_encyclopedia);
-        buttontoencyclopedia.setOnClickListener(new View.OnClickListener(){ //启动百事通
+        buttontoencyclopedia.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 MyencyclopediaActivity.actionStart(myEyes.this, "data3", "data4");
