@@ -23,14 +23,35 @@ public class PlantAdapter extends ArrayAdapter<Plant> {
         resourceId = textViewResourceId;
     }
 
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
         Plant plant = getItem(position);
-        View view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
-        ImageView plantImage = (ImageView) view.findViewById(R.id.plant_image);
-        TextView plantName = (TextView) view.findViewById(R.id.plant_name);
-        plantImage.setImageResource(plant.getImageId());
-        plantName.setText(plant.getName());
+
+        //提升ListView的运行效率
+        View view;
+        ViewHolder viewHolder;
+        if(convertView == null){
+            view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
+            viewHolder = new ViewHolder();
+            viewHolder.plantImage = (ImageView) view.findViewById(R.id.plant_image);
+            viewHolder.plantName = (TextView) view.findViewById(R.id.plant_name);
+            view.setTag(viewHolder);
+        }
+        else{
+            view = convertView;
+            viewHolder=(ViewHolder) view.getTag();
+        }
+        viewHolder.plantImage.setImageResource(plant.getImageId());
+        viewHolder.plantName.setText(plant.getName());
         return view;
     }
+
+    class ViewHolder{
+
+        ImageView plantImage;
+
+        TextView plantName;
+    }
+
 }

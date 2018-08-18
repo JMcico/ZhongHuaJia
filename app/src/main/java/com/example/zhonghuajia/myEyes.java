@@ -32,6 +32,16 @@ public class myEyes extends BaseActivity {
             actionbar.hide();
         }
 
+        //启动小伙伴
+        Button buttontofriends = (Button) findViewById(R.id.button_to_friends);
+        buttontofriends.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(myEyes.this, MyfriendsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         //启动小天堂
         Button buttontoheaven = (Button) findViewById(R.id.button_to_heaven);
         buttontoheaven.setOnClickListener(new View.OnClickListener(){
