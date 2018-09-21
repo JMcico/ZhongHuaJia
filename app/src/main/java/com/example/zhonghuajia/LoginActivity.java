@@ -67,7 +67,7 @@ public class LoginActivity extends BaseActivity {
                         editor.clear();
                     }
                     editor.apply();
-                    Intent intent = new Intent(LoginActivity.this, myEyes.class);
+                    Intent intent = new Intent(LoginActivity.this,myEyes.class );
                     startActivity(intent);
                     finish();
                 }

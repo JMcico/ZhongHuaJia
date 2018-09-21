@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ZhongHuaJia</string>
+    <string name="我的小眼睛">MyEyes</string>
+    <string name="我的小百科">MyEncyclopedia</string>
+    <string name="我的小伙伴">MyFriends</string>
+    <string name="我的小天堂">MyHeaven</string>
 </resources>

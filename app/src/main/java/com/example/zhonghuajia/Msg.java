@@ -4,7 +4,7 @@ package com.example.zhonghuajia;
  * Created by peple on 2018/8/19.
  */
 
-public class Msg {
+public class Msg {  // Message
 
     public static final int TYPE_RECEIVED = 0;
 

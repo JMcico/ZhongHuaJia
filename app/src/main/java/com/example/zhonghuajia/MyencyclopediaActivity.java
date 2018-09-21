@@ -42,11 +42,12 @@ public class MyencyclopediaActivity extends BaseActivity {
         PlantAdapter adapter = new PlantAdapter(MyencyclopediaActivity.this, R.layout.plant_item, plantList);
         ListView listView = (ListView) findViewById(R.id.list_view);
         listView.setAdapter(adapter);
+        //植物列表点击事件
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
                 Plant plant = plantList.get(position);
-                Toast.makeText(MyencyclopediaActivity.this, plant.getName(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MyencyclopediaActivity.this, myEyes.class);
             }
         });
 
